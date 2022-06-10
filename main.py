@@ -153,12 +153,11 @@ def webcam_show():
         #a frame catched from webcam
 
         if cnt > 40 and can_put: 
-            dist = ultrasonic.getDistance() 
-            if dist < 30 : 
-                print(dist)
+            dist = ultrasonic.getDistance()  #put a frame into queue every 40 frames and distance < 30
+            if dist < 30 :   
                 print("new frame")
                 q.put(img)
-                cnt = 0
+                cnt = 0 
             # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
 
@@ -179,7 +178,7 @@ def picam_show():
         cnt+=1
         img = picam2.capture_array() #a frame catched from picamera
         
-        if cnt >= 50 and can_put : #put one frame into queue evrey 45 frames
+        if cnt >= 45 and can_put : #put one frame into queue evrey 45 frames
                 q.put(img)
                 cnt = 0
         # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
