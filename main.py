@@ -133,7 +133,6 @@ def process(model, text_sys, lcd):
               
         dist = ultrasonic.getDistance()      
         if(can_put == False and dist > 30): # old car leaves and make queue able to receive new frames
-            print(dist)
             print("can put new frame")
             can_put = True
             gateOpenState = False   
