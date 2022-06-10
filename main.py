@@ -122,7 +122,7 @@ def process(model, text_sys, lcd):
             img = q.get() # get a frame from queue
             cnt+=1
             lcd.text("verifiying...", 1)
-            if(ALPR(model, text_sys, img, lcd, cnt)):
+            if(ALPR(model, text_sys, img, lcd, cnt)): # keep recognizing until suceeding
                 print("sucess")
                 gateOpenState = True   
                 can_put = False
@@ -132,7 +132,7 @@ def process(model, text_sys, lcd):
                 
               
         dist = ultrasonic.getDistance()      
-        if(can_put == False and dist > 30): # old car leaves
+        if(can_put == False and dist > 30): # old car leaves and make queue able to receive new frames
             print(dist)
             print("can put new frame")
             can_put = True
@@ -153,7 +153,7 @@ def webcam_show():
         #a frame catched from webcam
 
         if cnt > 40 and can_put: 
-            dist = ultrasonic.getDistance()  #put a frame into queue every 40 frames and distance < 30
+            dist = ultrasonic.getDistance()  #put a frame into queue every 40 frames when car approaches
             if dist < 30 :   
                 print("new frame")
                 q.put(img)
