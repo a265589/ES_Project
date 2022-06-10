@@ -1,0 +1,104 @@
+__init__.py
+main.ipynb
+obj.names
+__pycache__/capture.cpython-39.pyc
+__pycache__/database.cpython-39.pyc
+__pycache__/lcd1602.cpython-39.pyc
+__pycache__/servomotor.cpython-39.pyc
+__pycache__/ultrasonic.cpython-39.pyc
+cropped/cropped1.jpg
+cropped/cropped2.jpg
+cropped/cropped3.jpg
+cropped/cropped4.jpg
+cropped/cropped5.jpg
+cropped/cropped6.jpg
+cropped/cropped7.jpg
+cropped/cropped8.jpg
+cropped/cropped9.jpg
+cropped/cropped10.jpg
+cropped/cropped11.jpg
+images/car.jpg
+images/car1.jpg
+images/car2.jpg
+images/car3.jpg
+images/car4.jpg
+images/croped.jpg
+images/test.jpg
+onnxruntime_infer/__init__.py
+onnxruntime_infer/rapid_ocr_api.py
+onnxruntime_infer/README.md
+onnxruntime_infer/requirements.txt
+onnxruntime_infer/test_demo.py
+onnxruntime_infer/test_demo.sh
+onnxruntime_infer/__pycache__/__init__.cpython-39.pyc
+onnxruntime_infer/__pycache__/rapid_ocr_api.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/__init__.py
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/run.sh
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/text_cls.py
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/utils.py
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/__pycache__/__init__.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/__pycache__/text_cls.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_cls/__pycache__/utils.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_det/__init__.py
+onnxruntime_infer/ch_ppocr_mobile_v2_det/run.sh
+onnxruntime_infer/ch_ppocr_mobile_v2_det/text_detect.py
+onnxruntime_infer/ch_ppocr_mobile_v2_det/utils.py
+onnxruntime_infer/ch_ppocr_mobile_v2_det/__pycache__/__init__.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_det/__pycache__/text_detect.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_det/__pycache__/utils.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/__init__.py
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/ppocr_keys_v1.txt
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/run.sh
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/text_recognize.py
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/utils.py
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/__pycache__/__init__.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/__pycache__/text_recognize.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_mobile_v2_rec/__pycache__/utils.cpython-39.pyc
+onnxruntime_infer/ch_ppocr_server_v2_det/__init__.py
+onnxruntime_infer/ch_ppocr_server_v2_det/run.sh
+onnxruntime_infer/ch_ppocr_server_v2_det/text_detect.py
+onnxruntime_infer/ch_ppocr_server_v2_det/utils.py
+onnxruntime_infer/ch_ppocr_server_v2_rec/__init__.py
+onnxruntime_infer/ch_ppocr_server_v2_rec/ppocr_keys_v1.txt
+onnxruntime_infer/ch_ppocr_server_v2_rec/run.sh
+onnxruntime_infer/ch_ppocr_server_v2_rec/text_recognize.py
+onnxruntime_infer/ch_ppocr_server_v2_rec/utils.py
+onnxruntime_infer/fonts/korean.ttf
+onnxruntime_infer/fonts/msyh.ttc
+onnxruntime_infer/inference_results/infer_ch_en_num.jpg
+onnxruntime_infer/inference_results/infer_croped.jpg
+onnxruntime_infer/inference_results/infer_en_num.png
+onnxruntime_infer/inference_results/infer_japan.png
+onnxruntime_infer/inference_results/infer_korean_1.jpg
+onnxruntime_infer/models/ch_PP-OCRv2_det_infer.onnx
+onnxruntime_infer/models/ch_ppocr_mobile_v2.0_cls_infer.onnx
+onnxruntime_infer/models/ch_ppocr_mobile_v2.0_det_infer.onnx
+onnxruntime_infer/models/ch_ppocr_mobile_v2.0_rec_infer.onnx
+onnxruntime_infer/models/en_number_mobile_v2.0_rec_infer.onnx
+onnxruntime_infer/models/msyh.ttc
+onnxruntime_infer/rec_dict/en_dict.txt
+onnxruntime_infer/rec_dict/japan_dict.txt
+onnxruntime_infer/rec_dict/korean_dict.txt
+onnxruntime_infer/rec_dict/ppocr_keys_v1.txt
+onnxruntime_infer/test_images/det_images/ch_en_num.jpg
+onnxruntime_infer/test_images/det_images/en_num.png
+onnxruntime_infer/test_images/det_images/japan.png
+onnxruntime_infer/test_images/det_images/korean_1.jpg
+onnxruntime_infer/test_images/rec_images/imgs_words_ch/1.png
+onnxruntime_infer/test_images/rec_images/imgs_words_ch/2.png
+onnxruntime_infer/test_images/rec_images/imgs_words_en/word_10.png
+onnxruntime_infer/test_images/rec_images/imgs_words_japan/1.jpg
+onnxruntime_infer/test_images/rec_images/imgs_words_korean/1.jpg
+photo/ 1.jpg
+photo/ 2.jpg
+photo/ 3.jpg
+photo/ 4.jpg
+photo/ 5.jpg
+photo/ 6.jpg
+photo/ 7.jpg
+photo/ 8.jpg
+photo/ 9.jpg
+photo/ 10.jpg
+photo/ 11.jpg
+yolov4/yolov4-tiny-obj_best.weights
+yolov4/yolov4-tiny-obj.cfg
