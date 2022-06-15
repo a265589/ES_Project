@@ -118,7 +118,7 @@ def process(model, text_sys, lcd):
     can_put = True
     cnt = 0
     while True:
-        if q.empty() != True :
+        if q.empty() != True and can_put :
             img = q.get() # get a frame from queue
             cnt+=1
             lcd.text("verifiying...", 1)
@@ -126,17 +126,20 @@ def process(model, text_sys, lcd):
                 print("sucess")
                 gateOpenState = True   
                 can_put = False
-                while q.empty() != True: #remove old car's frames
-                    q.get()
-                print("remove all old frames") 
+
                 
               
         dist = ultrasonic.getDistance()      
-        if(can_put == False and dist > 30): # old car leaves and make queue able to receive new frames
+        if(can_put == False and dist > 40): # old car leaves and make queue able to receive new frames
+
+            while q.empty() != True: #remove old car's frames
+                q.get()
+            print("remove all old frames") 
             print("can put new frame")
             can_put = True
             gateOpenState = False   
             lcd.text("LPR system!", 1)
+
 
 
 
@@ -148,15 +151,18 @@ def webcam_show():
     global gateOpenState 
     q = queue.Queue() # a queue that store some frames to be recognized
     global cnt
+    before_dist = 0
+    can_put = True
     while True:
         #a frame catched from webcam
 
         if cnt > 40 and can_put: 
             dist = ultrasonic.getDistance()  #put a frame into queue every 40 frames when car approaches
-            if dist < 30 :   
+            if abs(dist - before_dist) <  1 and dist < 40: 
                 print("new frame")
                 q.put(img)
                 cnt = 0 
+            before_dist = dist
             # img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
 
@@ -191,16 +197,12 @@ def picam_show():
 
 def gate_control():
     global gateOpenState
-    beforeState = False
+    gateOpenState = False
     while True:
-        if beforeState == gateOpenState :
-            continue
-    
         if(gateOpenState):
-            servomotor.changeDutyCycle(6)
+            servomotor.changeDutyCycle(8)
         else:
-            servomotor.changeDutyCycle(10)
-        beforeState = gateOpenState
+            servomotor.changeDutyCycle(5)
         time.sleep(0.5)
      
 
@@ -235,8 +237,8 @@ if __name__ == '__main__':
             try:    
                 ret, img = cap.read()
                 cnt+=1
-                cv2.imshow('show_frame.jpg', img)
-                cv2.waitKey(1)
+                #cv2.imshow('show_frame.jpg', img)
+                #cv2.waitKey(1)
             except KeyboardInterrupt:
                 print("terminate")
                 GPIO.cleanup() 
